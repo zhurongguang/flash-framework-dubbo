@@ -2,7 +2,6 @@ package com.flash.framework.dubbo.env;
 
 import org.apache.dubbo.config.ApplicationConfig;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubboConfig;
-import org.apache.dubbo.config.spring.context.annotation.EnableDubboConfigBinding;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.ContextIdApplicationContextInitializer;
 import org.springframework.boot.env.EnvironmentPostProcessor;
@@ -39,7 +38,6 @@ public class DubboDefaultPropertiesEnvironmentPostProcessor implements Environme
      * The property name of {@link ApplicationConfig}
      *
      * @see EnableDubboConfig
-     * @see EnableDubboConfigBinding
      */
     private static final String DUBBO_APPLICATION_NAME_PROPERTY = "dubbo.application.name";
 
@@ -74,7 +72,7 @@ public class DubboDefaultPropertiesEnvironmentPostProcessor implements Environme
     }
 
     private Map<String, Object> createDefaultProperties(ConfigurableEnvironment environment) {
-        Map<String, Object> defaultProperties = new HashMap<String, Object>();
+        Map<String, Object> defaultProperties = new HashMap<>();
         setDubboApplicationNameProperty(environment, defaultProperties);
         setDubboConfigMultipleProperty(environment, defaultProperties);
         setDubboApplicationQosEnableProperty(environment, defaultProperties);
