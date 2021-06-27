@@ -1,5 +1,6 @@
 package com.flash.framework.dubbo.common.request;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -18,7 +19,14 @@ public abstract class RpcRequest implements Serializable {
     /**
      * 租户id
      */
+    @ApiModelProperty("租户ID")
     private Integer tenantId;
+
+    /**
+     * 调用人
+     */
+    @ApiModelProperty("调用人")
+    private String operator;
 
     /**
      * 参数校验，可以进行复杂参数/复杂逻辑的校验

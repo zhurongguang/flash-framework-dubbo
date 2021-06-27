@@ -1,1 +1,2 @@
 preValidateFilter=com.flash.framework.dubbo.filter.PreValidateFilter
+RequestContextFilter=com.flash.framework.dubbo.filter.RequestContextFilter

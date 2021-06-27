@@ -46,12 +46,12 @@
         </dependency>
 
         <dependency>
-            <groupId>com.esotericsoftware</groupId>
-            <artifactId>kryo</artifactId>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.javakaffee</groupId>
-            <artifactId>kryo-serializers</artifactId>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
         </dependency>
 
         <dependency>
